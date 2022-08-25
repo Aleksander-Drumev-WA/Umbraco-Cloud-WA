@@ -17,7 +17,7 @@
                 <h1 class="blog-title">@Model.Value("blogPostTitle")</h1>
                 <div>
                     <div class="post-info">@Model.Value("blogPostCreatedOn")</div>
-                    <div class="post-info">|</div><a href="./Categories.html#travel" class="post-info link">@Model.Value("blogPostCategory")</a>
+                    <div class="post-info">|</div><a href="/home/categories/@Model.Value("blogPostCategory").ToString().ToLower()" class="post-info link">@Model.Value("blogPostCategory")</a>
                 </div>
                 <div class="grey-rule"></div>
                 <div class="body-copy w-richtext">

@@ -1,7 +1,18 @@
 {
   "Deploy": {
     "Project": {
-      "Workspaces": []
+      "Name": "alexander was intuitive penguin",
+      "Alias": "alexander-was-intuitive-penguin",
+      "Id": "ec85980f-cebd-4ea8-88e1-c471672d7163",
+      "TrialExpireDate": "2022-09-08T08:19:19.0000000",
+      "Workspaces": [
+        {
+          "Id": "6769bed2-4073-48cb-8edf-c3a1a0afe10c",
+          "Name": "Live",
+          "Type": "live",
+          "Url": "https://alexander-was-intuitive-penguin.euwest01.umbraco.io"
+        }
+      ]
     },
     "Settings": {}
   },

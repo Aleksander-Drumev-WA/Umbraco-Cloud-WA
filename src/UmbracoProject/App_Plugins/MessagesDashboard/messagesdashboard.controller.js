@@ -3,7 +3,7 @@
     self.filter = '';
 
 
-    $http.get("https://localhost:44310/umbraco/api/messages/get").then(function (response) {
+    $http.get("https://alexander-was-intuitive-penguin.euwest01.umbraco.io/umbraco/api/messages/get").then(function (response) {
         self.messages = response.data;
 
     });
@@ -15,7 +15,7 @@
         };
 
         $http({
-            url: "https://localhost:44310/umbraco/api/messages/update",
+            url: "https://alexander-was-intuitive-penguin.euwest01.umbraco.io/umbraco/api/messages/update",
             method: 'PUT',
             data: data
         }).then(function (result) {
@@ -35,7 +35,7 @@
         };
 
         $http({
-            url: "https://localhost:44310/umbraco/api/messages/delete",
+            url: "https://alexander-was-intuitive-penguin.euwest01.umbraco.io/umbraco/api/messages/delete",
             dataType: 'json',
             method: 'DELETE',
             data: data,

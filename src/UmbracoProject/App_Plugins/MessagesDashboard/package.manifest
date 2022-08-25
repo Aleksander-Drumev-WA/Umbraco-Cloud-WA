@@ -2,7 +2,7 @@
   "dashboards": [
     {
       "alias": "messagesDashboard",
-      "view": "/App_Plugins/MessagesDashboard/MessagesDashboard.html",
+      "view": "~/App_Plugins/MessagesDashboard/MessagesDashboard.html",
       "sections": [ "content" ],
       "weight": -10,
       "access": [

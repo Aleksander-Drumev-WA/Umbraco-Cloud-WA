@@ -1,0 +1,29 @@
+{
+  "Name": "Render Blog Posts",
+  "Alias": "RenderBlogPosts",
+  "MacroSource": "~/Views/MacroPartials/Render Blog Posts.cshtml",
+  "UseInEditor": false,
+  "CacheDuration": 0,
+  "CacheByPage": false,
+  "CacheByMember": false,
+  "DontRender": false,
+  "Properties": [
+    {
+      "Key": "c5642a02-b9d8-404d-8bd5-a7098473d46b",
+      "Alias": "amount",
+      "Name": "Amount",
+      "SortOrder": 0,
+      "EditorAlias": "Umbraco.Integer"
+    }
+  ],
+  "Udi": "umb://macro/580cf52879304487a466342efe7b1b19",
+  "Dependencies": [
+    {
+      "Udi": "umb://partial-view-macro/Render%20Blog%20Posts.cshtml",
+      "Ordering": true,
+      "Mode": 1
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.MacroArtifact",
+  "__version": "10.0.3"
+}

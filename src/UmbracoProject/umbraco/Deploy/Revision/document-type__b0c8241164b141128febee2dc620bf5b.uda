@@ -1,0 +1,38 @@
+{
+  "Name": "All Posts",
+  "Alias": "allPosts",
+  "DefaultTemplate": null,
+  "AllowedTemplates": [
+    "umb://template/a9d57be6dc634486956dac1bd0ad2a1c"
+  ],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-post-it color-blue",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": true,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/b0c8241164b141128febee2dc620bf5b",
+  "Dependencies": [
+    {
+      "Udi": "umb://template/a9d57be6dc634486956dac1bd0ad2a1c",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "10.0.3"
+}

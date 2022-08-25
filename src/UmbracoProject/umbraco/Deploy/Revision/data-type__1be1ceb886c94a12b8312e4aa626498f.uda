@@ -1,0 +1,12 @@
+{
+  "Name": "Blog Post - Blog Post Created On - DateTime",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DateTime",
+  "DatabaseType": 3,
+  "Configuration": {"format":"YYYY-MM-DD","offsetTime":true},
+  "Parent": null,
+  "Udi": "umb://data-type/1be1ceb886c94a12b8312e4aa626498f",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "10.0.3"
+}

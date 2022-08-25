@@ -1,0 +1,21 @@
+{
+  "Name": "Category",
+  "Alias": "Category",
+  "File": "umb://template-file/Category.cshtml",
+  "Master": "umb://template/025e57062dd242138bfaa9e8dc451d7d",
+  "Udi": "umb://template/056bd2b6490d464fb9fa83e2b2fd9269",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Category.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/025e57062dd242138bfaa9e8dc451d7d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "10.0.3"
+}

@@ -1,0 +1,20 @@
+{
+  "dashboards": [
+    {
+      "alias": "messagesDashboard",
+      "view": "/App_Plugins/MessagesDashboard/MessagesDashboard.html",
+      "sections": [ "content" ],
+      "weight": -10,
+      "access": [
+        { "deny": "translator" },
+        { "grant": "admin" }
+      ]
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/MessagesDashboard/messagesdashboard.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/MessagesDashboard/messagesdashboard.css"
+  ]
+}

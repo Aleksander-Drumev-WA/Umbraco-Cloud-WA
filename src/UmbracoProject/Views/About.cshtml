@@ -1,0 +1,24 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.About>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<head>
+    <title>About</title>
+</head>
+
+<div class="content-wrapper">
+        <div class="post-wrapper"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <div class="about-image"></div>
+            <div class="post-content">
+                <div class="body-copy w-richtext">
+                    <h1>@Model.Value("heading")</h1>
+                    @Model.Value("content")
+                </div><a href="/contact" class="button w-button">Get in touch</a>
+            </div>
+        </div>
+        
+</div>

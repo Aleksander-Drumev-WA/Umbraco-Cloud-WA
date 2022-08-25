@@ -1,0 +1,63 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-active">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/fonts.css" media="all">
+    <link href="/Images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/Images/webclip.png" rel="apple-touch-icon">
+    
+    
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="">
+    <div class="sidebar-wrapper">
+        <div class="header">
+            <a href="/Home" class="site-name">Milton</a>
+            <div class="grey-rule w-hidden-small w-hidden-tiny"></div>
+            <p class="site-description">Denali is a simple responsive blog template. Easily add new posts using the
+                Editor or change layout and design using the Designer.</p>
+            <div class="grey-rule w-hidden-small w-hidden-tiny"></div>
+            <nav class="navigation">
+                
+                @{
+                	var selection = Umbraco.ContentAtRoot().FirstOrDefault()
+                    .Children()
+                    .Where(x => x.IsVisible());
+                }
+                <ul>
+                	@foreach (var item in selection)
+                	{
+                			<a href="@item.Url()" class="nav-link">@item.Name()</a>
+                	}
+                </ul>
+                <div class="grey-rule w-hidden-small w-hidden-tiny"></div>
+            </nav>
+            <div class="social-link-group">
+                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/facebook.svg" width="25" alt=""></a>
+                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/instagram.svg" width="25" alt=""></a>
+                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/twitter.svg" width="25" alt=""></a>
+                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/linkedin.svg" width="25" alt=""></a>
+                <a href="mailto:fsdf@adf.df" class="social-icon-link w-inline-block"><img src="/Images/Social/email.svg" width="25" alt=""></a>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    
+    <script type="text/javascript">
+        WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"] } });
+    </script>
+    <script src="/js/webfont.js" type="text/javascript"></script>
+    <script src="/js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript"></script>
+</body>
+
+</html>

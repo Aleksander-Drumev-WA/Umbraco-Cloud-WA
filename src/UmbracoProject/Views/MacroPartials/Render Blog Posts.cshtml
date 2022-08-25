@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Cms.Web.Common.Macros.PartialViewMacroPage
+@{
+    var postsCount = int.Parse(Model.MacroParameters["amount"].ToString());
+    var selection = Umbraco.Content(Guid.Parse("c44023a8-22b5-4d53-aa25-30232c9aca97"))
+                        .ChildrenOfType("blogPost")
+                        .Where(x => x.IsVisible())
+                        .OrderByDescending(x => x.CreateDate)
+                        .AsQueryable();
+
+    if (postsCount > 0)
+    {
+        // Couldn't cast it if not IQueryable.
+        selection = selection.Take(postsCount);
+    }
+}
+
+<div class="w-dyn-list">
+        <div role="list" class="w-dyn-items">
+
+            @foreach (var item in selection)
+            {
+                <div role="listitem" class="w-dyn-item">
+                    <div class="post-wrapper"
+                     style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                        <a href="@item.Url()"
+                       style="background-image:url(&quot;@item.Value("blogPostPhoto")&quot;)" class="blog-image w-inline-block"></a>
+                        <div class="post-content">
+                            <a
+                                href="@item.Url()"
+                                class="blog-title-link w-inline-block">
+                                <h1 class="blog-title">@item.Value("blogPostTitle")</h1>
+                            </a>
+                            <div class="post-summary-wrapper">
+                                <p class="post-summary">@item.Value("blogPostShortText")</p>
+                                <a href="@item.Url()" class="read-more-link">Read more...</a>
+                            </div>
+                            <div class="post-info-wrapper">
+                                <div class="post-info">@item.Value("blogPostCreatedOn")</div>
+                                <div class="post-info">|</div><a href="/categories/@item.Value("blogPostCategory").ToString().ToLower()" class="post-info link">@item.Value("blogPostCategory")</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

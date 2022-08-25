@@ -1,4 +1,7 @@
-namespace UmbracoProject
+using UmbracoExercise.Core.Data.Services;
+using UmbracoExercise.Extensions;
+
+namespace UmbracoExercise
 {
     public class Startup
     {
@@ -33,7 +36,10 @@ namespace UmbracoProject
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
+                .AddMessages()
                 .Build();
+
+            services.AddScoped<MessagesDataService>();
         }
 
         /// <summary>
@@ -48,8 +54,6 @@ namespace UmbracoProject
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseUmbraco()
                 .WithMiddleware(u =>
                 {
@@ -61,6 +65,13 @@ namespace UmbracoProject
                     u.UseInstallerEndpoints();
                     u.UseBackOfficeEndpoints();
                     u.UseWebsiteEndpoints();
+
+                    // Config for Contact Controller v
+
+                    u.EndpointRouteBuilder.MapControllerRoute(
+                                   "contact-route",
+                                   "/contact/{action}/{id?}",
+                                   new { Controller = "Contact", Action = "Render" });
                 });
         }
     }

@@ -1,4 +1,4 @@
-namespace UmbracoProject
+namespace UmbracoExercise
 {
     public class Program
     {

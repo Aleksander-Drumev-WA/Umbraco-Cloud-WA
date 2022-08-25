@@ -1,0 +1,14 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+<head>
+    <title>Blog Home</title>
+</head>
+
+<div class="content-wrapper">
+    @await Umbraco.RenderMacroAsync("RenderBlogPosts", new { amount="5" })
+    <div class="button-wrapper"><a href="/home/all-posts" class="button w-button">All Posts&nbsp;→</a></div>
+</div>

@@ -1,0 +1,29 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogPost>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<head>
+    <title>@Model.Value("blogPostTitle")</title>
+</head>
+
+<div class="content-wrapper">
+        <div class="post-wrapper"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <div style="background-image:url(&quot;@Model.Value("blogPostPhoto")&quot;)" class="blog-image blog-page"></div>
+            <div class="post-content">
+                <h1 class="blog-title">@Model.Value("blogPostTitle")</h1>
+                <div>
+                    <div class="post-info">@Model.Value("blogPostCreatedOn")</div>
+                    <div class="post-info">|</div><a href="./Categories.html#travel" class="post-info link">@Model.Value("blogPostCategory")</a>
+                </div>
+                <div class="grey-rule"></div>
+                <div class="body-copy w-richtext">
+                    @Model.Value("blogPostFullText")
+                </div>
+            </div>
+        </div>
+        <div class="button-wrapper"><a href="/home/all-posts" class="button w-button">←&nbsp;All posts&nbsp;</a></div>
+    </div>

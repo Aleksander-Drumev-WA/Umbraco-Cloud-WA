@@ -1,0 +1,13 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "Master.cshtml";
+}
+
+<head>
+    <title>All Posts</title>
+</head>
+
+<div class="content-wrapper">
+    @await Umbraco.RenderMacroAsync("RenderBlogPosts", new {amount="-1"})
+</div>

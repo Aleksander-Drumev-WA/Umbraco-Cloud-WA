@@ -15,13 +15,13 @@
   "Description": null,
   "IsContainer": false,
   "Permissions": {
-    "AllowVaryingByCulture": false,
+    "AllowVaryingByCulture": true,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": false,
     "IsElementType": false,
     "AllowedChildContentTypes": []
   },
-  "Parent": null,
+  "Parent": "umb://document-type-container/133e149db4c2446a949ebee9c8252bc6",
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
@@ -32,6 +32,22 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "3c6df1a5-ee23-48e9-8f2b-20c031a21780",
+          "Alias": "categoryUrl",
+          "DataType": "umb://data-type/fd1e0da556064862b6795d0cf3a52a59",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Category Url",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": true,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
           "Key": "9fab7e18-e766-48f4-a408-9efd13b8b417",
           "Alias": "categoryName",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -40,7 +56,7 @@
           "Name": "Category Name",
           "SortOrder": 0,
           "Validation": null,
-          "VariesByCulture": false,
+          "VariesByCulture": true,
           "VariesBySegment": false,
           "LabelOnTop": false,
           "MemberCanEdit": false,
@@ -55,6 +71,16 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/fd1e0da556064862b6795d0cf3a52a59",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/133e149db4c2446a949ebee9c8252bc6",
       "Ordering": true,
       "Mode": 0
     },

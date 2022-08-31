@@ -1,25 +1,30 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using System.Globalization
+@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
     Layout = "Master.cshtml";
 
-    var category = Model.Url().Split("/", StringSplitOptions.RemoveEmptyEntries).Last();
+    //var category = Model.Url().Split("/", StringSplitOptions.RemoveEmptyEntries).Last().ToLower();
+
+    var currentCulture = @Model.GetCultureFromDomains();
 
     var selection = Umbraco.Content(Guid.Parse("c44023a8-22b5-4d53-aa25-30232c9aca97"))
-    .ChildrenOfType("blogPost")
-    .Where(x => x.IsVisible() && x.Value("blogPostCategory").ToString().ToLower() == category);
+                        .ChildrenOfType("blogPost")
+                        .Where(x => x.IsVisible() && x.Value("categoryName").ToString().ToLower() == Model.Name.ToLower());
+                        
+
 
 }
 <head>
     <title>
-        @category
+        @Model.Name
     </title>
 </head>
 
 @foreach (var item in selection)
 {
     <div class="content-wrapper">
-        <h1 class="white-bg-heading">@item.Value("blogPostCategory")</h1>
+        <h1 class="white-bg-heading">@item.Value("categoryName")</h1>
         <div class="w-dyn-list">
             <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
@@ -34,25 +39,21 @@
                             </a>
                             <div class="post-summary-wrapper">
                                 <p class="post-summary">
-                                    Saucer, crema carajillo, bar, mocha medium, latte cappuccino and
-                                    espresso acerbic to go. Coffee, irish foam turkish coffee blue mountain seasonal.
-                                    Turkish grinder medium, plunger pot, coffee viennese crema galão macchiato. Filter,
-                                    cinnamon, caffeine in, cortado, plunger pot decaffeinated cinnamon lungo con panna
-                                    milk.
+                                    @item.Value("blogPostShortText")
 
 
-                                </p><a href="./BlogItem.html" class="read-more-link">Read more...</a>
+                                </p><a href="@item.Url()" class="read-more-link">Read more...</a>
                             </div>
                             <div class="post-info-wrapper">
                                 <div class="post-info">@item.Value("blogPostCreatedOn")</div>
-                                <div class="post-info">|</div><a href="#" class="post-info link">@item.Value("blogPostCategory")</a>
+                                <div class="post-info">|</div><a href="#" class="post-info link">@item.Value("categoryName")</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="button-wrapper"><a href="/home/all-posts" class="button w-button">All Posts&nbsp;→</a></div>
+        <div class="button-wrapper"><a href="/all-posts/@currentCulture" class="button w-button">All Posts&nbsp;→</a></div>
     </div>
 }
 

@@ -15,14 +15,16 @@
   "Description": null,
   "IsContainer": false,
   "Permissions": {
-    "AllowVaryingByCulture": false,
+    "AllowVaryingByCulture": true,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": false,
     "IsElementType": false,
     "AllowedChildContentTypes": []
   },
-  "Parent": null,
-  "CompositionContentTypes": [],
+  "Parent": "umb://document-type-container/a2d8bdc0d63d4b9d979ce99d8253d556",
+  "CompositionContentTypes": [
+    "umb://document-type/0ca9e106e38f4a6697d331783eee62bc"
+  ],
   "PropertyGroups": [
     {
       "Key": "425d28c0-bb90-4572-8bef-d32e97c0b48a",
@@ -38,7 +40,7 @@
           "Description": null,
           "Mandatory": true,
           "Name": "Blog Post Photo",
-          "SortOrder": 0,
+          "SortOrder": 2,
           "Validation": null,
           "VariesByCulture": false,
           "VariesBySegment": false,
@@ -54,9 +56,9 @@
           "Description": null,
           "Mandatory": true,
           "Name": "Blog Post Created On",
-          "SortOrder": 4,
+          "SortOrder": 6,
           "Validation": null,
-          "VariesByCulture": false,
+          "VariesByCulture": true,
           "VariesBySegment": false,
           "LabelOnTop": false,
           "MemberCanEdit": false,
@@ -70,9 +72,9 @@
           "Description": null,
           "Mandatory": true,
           "Name": "Blog Post Title",
-          "SortOrder": 1,
+          "SortOrder": 3,
           "Validation": null,
-          "VariesByCulture": false,
+          "VariesByCulture": true,
           "VariesBySegment": false,
           "LabelOnTop": false,
           "MemberCanEdit": false,
@@ -86,9 +88,9 @@
           "Description": "First few sentences",
           "Mandatory": true,
           "Name": "Blog Post Short Text",
-          "SortOrder": 3,
+          "SortOrder": 5,
           "Validation": null,
-          "VariesByCulture": false,
+          "VariesByCulture": true,
           "VariesBySegment": false,
           "LabelOnTop": false,
           "MemberCanEdit": false,
@@ -102,34 +104,9 @@
           "Description": null,
           "Mandatory": true,
           "Name": "Blog Post Full Text",
-          "SortOrder": 2,
+          "SortOrder": 4,
           "Validation": null,
-          "VariesByCulture": false,
-          "VariesBySegment": false,
-          "LabelOnTop": false,
-          "MemberCanEdit": false,
-          "ViewOnProfile": false,
-          "IsSensitive": false
-        }
-      ]
-    },
-    {
-      "Key": "f0244d3b-cf2f-4ee8-9bfd-6ac9a18af500",
-      "Name": "Category",
-      "SortOrder": 1,
-      "Type": 0,
-      "Alias": "category",
-      "PropertyTypes": [
-        {
-          "Key": "1e82973a-f787-4ee1-b672-d102af646806",
-          "Alias": "blogPostCategory",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Description": null,
-          "Mandatory": true,
-          "Name": "Blog Post Category",
-          "SortOrder": 0,
-          "Validation": null,
-          "VariesByCulture": false,
+          "VariesByCulture": true,
           "VariesBySegment": false,
           "LabelOnTop": false,
           "MemberCanEdit": false,
@@ -164,6 +141,16 @@
     },
     {
       "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/a2d8bdc0d63d4b9d979ce99d8253d556",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/0ca9e106e38f4a6697d331783eee62bc",
       "Ordering": true,
       "Mode": 0
     },

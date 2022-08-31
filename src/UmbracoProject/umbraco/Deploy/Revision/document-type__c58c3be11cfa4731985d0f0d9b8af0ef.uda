@@ -15,22 +15,106 @@
   "Description": null,
   "IsContainer": false,
   "Permissions": {
-    "AllowVaryingByCulture": false,
+    "AllowVaryingByCulture": true,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": true,
     "IsElementType": false,
     "AllowedChildContentTypes": [
-      "umb://document-type/b0c8241164b141128febee2dc620bf5b",
+      "umb://document-type/d5032f2a36fc481989ea88bf08a729ca",
+      "umb://document-type/f310d45a993a4a0c9650298920ba598e",
       "umb://document-type/31888cab53f04616a04bb87085a315bb",
+      "umb://document-type/b0c8241164b141128febee2dc620bf5b",
       "umb://document-type/c076134cedd64f059271f7689afac20d"
     ]
   },
-  "Parent": null,
+  "Parent": "umb://document-type-container/a428cbc005494555aef3eb42687a6206",
   "CompositionContentTypes": [],
-  "PropertyGroups": [],
+  "PropertyGroups": [
+    {
+      "Key": "7989119c-b668-499d-938c-bc526c95c6b5",
+      "Name": "Buttons",
+      "SortOrder": 1,
+      "Type": 0,
+      "Alias": "buttons",
+      "PropertyTypes": [
+        {
+          "Key": "24eb9d91-0c4d-401b-8b20-4912e86c5825",
+          "Alias": "homeAllPostsButton",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Home All Posts Button",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": true,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    },
+    {
+      "Key": "f458e29f-d8d7-4330-9616-44a77cbf6100",
+      "Name": "Content",
+      "SortOrder": 0,
+      "Type": 0,
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "94e4d06e-0a8e-4185-bf1e-a20e8b2a1ce0",
+          "Alias": "homeHeader",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Home Header",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": true,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "dabad42f-b160-46b5-bf77-b9c9c292d47f",
+          "Alias": "homeShortText",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Home Short Text",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": true,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/c58c3be11cfa4731985d0f0d9b8af0ef",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/a428cbc005494555aef3eb42687a6206",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://document-type/31888cab53f04616a04bb87085a315bb",
       "Ordering": false,
@@ -43,6 +127,16 @@
     },
     {
       "Udi": "umb://document-type/c076134cedd64f059271f7689afac20d",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/d5032f2a36fc481989ea88bf08a729ca",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/f310d45a993a4a0c9650298920ba598e",
       "Ordering": false,
       "Mode": 0
     },

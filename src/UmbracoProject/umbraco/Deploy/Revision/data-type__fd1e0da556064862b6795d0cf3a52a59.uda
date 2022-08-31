@@ -3,7 +3,7 @@
   "Alias": "",
   "EditorAlias": "Umbraco.ContentPicker",
   "DatabaseType": 1,
-  "Configuration": {"showOpenButton":false,"ignoreUserStartNodes":false},
+  "Configuration": {"showOpenButton":true,"ignoreUserStartNodes":false},
   "Parent": null,
   "Udi": "umb://data-type/fd1e0da556064862b6795d0cf3a52a59",
   "Dependencies": [],

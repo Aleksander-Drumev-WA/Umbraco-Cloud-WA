@@ -592,3 +592,25 @@ figcaption {
     line-height: 32px;
   }
 }
+
+.current {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#en-btn:disabled {
+    color: red;
+}
+
+#bg-btn:disabled {
+    color: red;
+}

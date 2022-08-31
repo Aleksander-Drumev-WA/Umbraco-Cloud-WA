@@ -15,13 +15,13 @@
   "Description": null,
   "IsContainer": false,
   "Permissions": {
-    "AllowVaryingByCulture": false,
+    "AllowVaryingByCulture": true,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": false,
     "IsElementType": false,
     "AllowedChildContentTypes": []
   },
-  "Parent": null,
+  "Parent": "umb://document-type-container/a428cbc005494555aef3eb42687a6206",
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
@@ -33,14 +33,14 @@
       "PropertyTypes": [
         {
           "Key": "57a80b44-e362-459b-b444-50fac94c9d6c",
-          "Alias": "heading",
+          "Alias": "aboutHeading",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Description": null,
           "Mandatory": false,
-          "Name": "Heading",
+          "Name": "About Heading",
           "SortOrder": 0,
           "Validation": null,
-          "VariesByCulture": false,
+          "VariesByCulture": true,
           "VariesBySegment": false,
           "LabelOnTop": false,
           "MemberCanEdit": false,
@@ -49,14 +49,30 @@
         },
         {
           "Key": "9cefc251-3c30-48d6-bf4d-1d0eb5333ad0",
-          "Alias": "content",
+          "Alias": "aboutContent",
           "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
           "Description": null,
           "Mandatory": false,
-          "Name": "Content",
+          "Name": "About Content",
           "SortOrder": 1,
           "Validation": null,
-          "VariesByCulture": false,
+          "VariesByCulture": true,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "aa25b046-aa34-499d-93ad-a74a9b6bbbe7",
+          "Alias": "aboutButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "About Button Text",
+          "SortOrder": 2,
+          "Validation": null,
+          "VariesByCulture": true,
           "VariesBySegment": false,
           "LabelOnTop": false,
           "MemberCanEdit": false,
@@ -76,6 +92,11 @@
     },
     {
       "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/a428cbc005494555aef3eb42687a6206",
       "Ordering": true,
       "Mode": 0
     },

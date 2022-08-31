@@ -63,9 +63,15 @@
     <Content Include="App_Plugins\Deploy\views\partials\progress.html" />
     <Content Include="App_Plugins\Deploy\views\partials\queue.html" />
     <Content Include="App_Plugins\Deploy\views\partials\workspace-info.html" />
-    <Content Include="App_Plugins\MessagesDashboard\Lang\en-US.xml" />
-    <Content Include="App_Plugins\MessagesDashboard\messagesdashboard.css" />
-    <Content Include="App_Plugins\MessagesDashboard\MessagesDashboard.html" />
+    <Content Include="App_Plugins\MessagesDashboard\Lang\en-US.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\MessagesDashboard\messagesdashboard.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\MessagesDashboard\MessagesDashboard.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Plugins\UmbracoId\BackOffice\assets\css\style.css" />
     <Content Include="App_Plugins\UmbracoId\BackOffice\custom-login-errors.html" />
     <Content Include="App_Plugins\UmbracoId\BackOffice\custom-login.html" />
@@ -85,8 +91,12 @@
     <None Include="App_Plugins\Deploy\js\nonodes.modules.js" />
     <None Include="App_Plugins\Deploy\lib\signalr\signalr.min.js" />
     <None Include="App_Plugins\Deploy\package.manifest" />
-    <None Include="App_Plugins\MessagesDashboard\messagesdashboard.controller.js" />
-    <None Include="App_Plugins\MessagesDashboard\package.manifest" />
+    <None Include="App_Plugins\MessagesDashboard\messagesdashboard.controller.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Plugins\MessagesDashboard\package.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="App_Plugins\UmbracoId\BackOffice\assets\images\background-login.svg" />
     <None Include="App_Plugins\UmbracoId\BackOffice\assets\images\logo-horizontal.svg" />
     <None Include="App_Plugins\UmbracoId\BackOffice\customlogin.controller.js" />

@@ -15,7 +15,7 @@
   "Permissions": {
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
-    "AllowedAtRoot": true,
+    "AllowedAtRoot": false,
     "IsElementType": false,
     "AllowedChildContentTypes": [
       "umb://document-type/c58c3be11cfa4731985d0f0d9b8af0ef",

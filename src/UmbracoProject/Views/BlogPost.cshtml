@@ -1,8 +1,12 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core
+
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogPost>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "Master.cshtml";
+
+    var currentCulture = @Model.GetCultureFromDomains().Substring(0, 2);
 }
 
 <head>
@@ -17,7 +21,11 @@
                 <h1 class="blog-title">@Model.Value("blogPostTitle")</h1>
                 <div>
                     <div class="post-info">@Model.Value("blogPostCreatedOn")</div>
-                    <div class="post-info">|</div><a href="/home/categories/@Model.Value("blogPostCategory").ToString().ToLower()" class="post-info link">@Model.Value("blogPostCategory")</a>
+                    @{
+                        var category = Model.Value<IPublishedContent>("CategoryUrl");
+                        var url = category.Url();
+                     }
+                    <div class="post-info">|</div><a href="@url" class="post-info link">@Model.Value("categoryName")</a>
                 </div>
                 <div class="grey-rule"></div>
                 <div class="body-copy w-richtext">
@@ -25,5 +33,5 @@
                 </div>
             </div>
         </div>
-        <div class="button-wrapper"><a href="/home/all-posts" class="button w-button">←&nbsp;All posts&nbsp;</a></div>
+        <div class="button-wrapper"><a href="/all-posts/@currentCulture/" class="button w-button">←&nbsp;All posts&nbsp;</a></div>
     </div>

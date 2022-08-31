@@ -6,7 +6,7 @@
 }
 
 <head>
-    <title>About</title>
+    <title>@Model.Value("heading")</title>
 </head>
 
 <div class="content-wrapper">
@@ -15,9 +15,9 @@
             <div class="about-image"></div>
             <div class="post-content">
                 <div class="body-copy w-richtext">
-                    <h1>@Model.Value("heading")</h1>
-                    @Model.Value("content")
-                </div><a href="/contact" class="button w-button">Get in touch</a>
+                    <h1>@Model.Value("aboutHeading")</h1>
+                    @Model.Value("aboutContent")
+                </div><a href="/contact" class="button w-button">@Model.Value("aboutButtonText")</a>
             </div>
         </div>
         

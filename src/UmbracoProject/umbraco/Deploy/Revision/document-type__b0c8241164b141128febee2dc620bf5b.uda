@@ -15,18 +15,23 @@
   "Description": null,
   "IsContainer": false,
   "Permissions": {
-    "AllowVaryingByCulture": false,
+    "AllowVaryingByCulture": true,
     "AllowVaryingBySegment": false,
     "AllowedAtRoot": true,
     "IsElementType": false,
     "AllowedChildContentTypes": []
   },
-  "Parent": null,
+  "Parent": "umb://document-type-container/a2d8bdc0d63d4b9d979ce99d8253d556",
   "CompositionContentTypes": [],
   "PropertyGroups": [],
   "PropertyTypes": [],
   "Udi": "umb://document-type/b0c8241164b141128febee2dc620bf5b",
   "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/a2d8bdc0d63d4b9d979ce99d8253d556",
+      "Ordering": true,
+      "Mode": 0
+    },
     {
       "Udi": "umb://template/a9d57be6dc634486956dac1bd0ad2a1c",
       "Ordering": true,

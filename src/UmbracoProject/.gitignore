@@ -153,6 +153,12 @@ coverage*.info
 *.coverage
 *.coveragexml
 
+
+# SQLite database files
+/umbraco/Data/*.sqlite.db
+/umbraco/Data/*.sqlite.db-shm
+/umbraco/Data/*.sqlite.db-wal
+
 # NCrunch
 _NCrunch_*
 .*crunch*.local.xml
@@ -264,8 +270,6 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
-*.mdf
-*.ldf
 *.ndf
 
 # Business Intelligence projects
@@ -466,13 +470,7 @@ appsettings-schema.json
 # Temp folder containing Examine indexes, NuCache, MediaCache, etc.
 /umbraco/Data/TEMP/
 
-# SQLite database files
-/umbraco/Data/*.sqlite.db
-/umbraco/Data/*.sqlite.db-shm
-/umbraco/Data/*.sqlite.db-wal
 
-# Log files
-/umbraco/Logs/
 
 # Media files
 /wwwroot/media/

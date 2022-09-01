@@ -1,4 +1,6 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
     Layout = null;
@@ -8,7 +10,11 @@
                     .Where(x => x.IsVisible())
                     .Take(2);
 
-    var currentCulture = @Model.GetCultureFromDomains().Substring(0, 2);
+    var currentCulture = Model.GetCultureFromDomains().Substring(0, 2);
+
+    var nestedContentLinks = Model.Value<IEnumerable<IPublishedElement>>("homeNestedLinks");
+    var blockListLinks = Model.Value<IEnumerable<BlockListItem>>("homeBlockListLinks");
+
 }
 
 <!DOCTYPE html>
@@ -52,11 +58,17 @@
                 <div class="grey-rule w-hidden-small w-hidden-tiny"></div>
             </nav>
             <div class="social-link-group">
-                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/facebook.svg" width="25" alt=""></a>
-                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/instagram.svg" width="25" alt=""></a>
-                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/twitter.svg" width="25" alt=""></a>
-                <a href="#link to profile" class="social-icon-link w-inline-block"><img src="/Images/Social/linkedin.svg" width="25" alt=""></a>
-                <a href="mailto:fsdf@adf.df" class="social-icon-link w-inline-block"><img src="/Images/Social/email.svg" width="25" alt=""></a>
+                @{
+                    foreach (var link in nestedContentLinks)
+                    {
+                        var image = link.Value<IPublishedContent>("socialLinkImage");
+                        var url = link.Value<Link>("socialLinkLink");
+
+                        <a href="@url.Url" class="social-icon-link w-inline-block"><img src="@image.Url()" width="25" alt=""></a>
+                    }
+
+                    @Html.GetBlockListHtml(Model, "homeBlockListLinks")
+                }
             </div>
         </div>
     </div>

@@ -1,0 +1,12 @@
+{
+  "Name": "Home - Home Nested Links - Nested Content",
+  "Alias": "",
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "Configuration": {"contentTypes":[{"ncAlias":"socialLink","ncTabAlias":"Content","nameTemplate":""}],"confirmDeletes":true,"showIcons":true,"expandsOnLoad":true,"hideLabel":false},
+  "Parent": null,
+  "Udi": "umb://data-type/c5fe25df90a448df8203cbaedaba29a4",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "10.0.3"
+}

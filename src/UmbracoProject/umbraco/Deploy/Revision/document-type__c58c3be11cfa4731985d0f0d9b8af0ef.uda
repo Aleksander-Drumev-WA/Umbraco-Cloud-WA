@@ -31,6 +31,47 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
+      "Key": "0f5eee2a-af75-4032-a1fd-6a3e0d9a0533",
+      "Name": "Social Links",
+      "SortOrder": 2,
+      "Type": 0,
+      "Alias": "socialLinks",
+      "PropertyTypes": [
+        {
+          "Key": "20a88b49-3b40-4364-a9b0-0ea1dee16b6f",
+          "Alias": "homeBlockListLinks",
+          "DataType": "umb://data-type/e1245034fa594271a6b0658a18f0cc88",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Home Block List Links",
+          "SortOrder": 1,
+          "Validation": null,
+          "VariesByCulture": true,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "e07525be-3758-4555-861e-1599d57dc757",
+          "Alias": "homeNestedLinks",
+          "DataType": "umb://data-type/c5fe25df90a448df8203cbaedaba29a4",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Home Nested Links",
+          "SortOrder": 0,
+          "Validation": null,
+          "VariesByCulture": true,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    },
+    {
       "Key": "7989119c-b668-499d-938c-bc526c95c6b5",
       "Name": "Buttons",
       "SortOrder": 1,
@@ -106,7 +147,17 @@
       "Mode": 0
     },
     {
+      "Udi": "umb://data-type/c5fe25df90a448df8203cbaedaba29a4",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
       "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/e1245034fa594271a6b0658a18f0cc88",
       "Ordering": true,
       "Mode": 0
     },

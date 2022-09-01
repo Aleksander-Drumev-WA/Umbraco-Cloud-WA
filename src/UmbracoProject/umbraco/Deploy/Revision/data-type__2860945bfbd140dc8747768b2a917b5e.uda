@@ -1,0 +1,12 @@
+{
+  "Name": "Social Link - Social Link Image - Media Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MediaPicker3",
+  "DatabaseType": 0,
+  "Configuration": {"filter":"umbracoMediaVectorGraphics","multiple":false,"validationLimit":{},"enableLocalFocalPoint":false,"crops":[],"ignoreUserStartNodes":false},
+  "Parent": null,
+  "Udi": "umb://data-type/2860945bfbd140dc8747768b2a917b5e",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "10.0.3"
+}

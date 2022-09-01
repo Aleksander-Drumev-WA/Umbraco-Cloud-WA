@@ -1,0 +1,12 @@
+{
+  "Name": "Home - Home Block List Links - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "DatabaseType": 0,
+  "Configuration": {"blocks":[{"contentElementTypeKey":"1ceb84cf-e2c8-4862-9a16-9fe11eaf4745","label":"Social Link","editorSize":"medium","forceHideContentEditorInOverlay":false}],"validationLimit":{},"useLiveEditing":false,"useInlineEditingAsDefault":false},
+  "Parent": null,
+  "Udi": "umb://data-type/e1245034fa594271a6b0658a18f0cc88",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "10.0.3"
+}

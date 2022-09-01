@@ -3,7 +3,7 @@
   "Alias": "",
   "EditorAlias": "Umbraco.MultiUrlPicker",
   "DatabaseType": 0,
-  "Configuration": {"minNumber":0,"maxNumber":0,"hideAnchor":false,"ignoreUserStartNodes":false},
+  "Configuration": {"minNumber":1,"maxNumber":1,"overlaySize":"small","hideAnchor":false,"ignoreUserStartNodes":false},
   "Parent": null,
   "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
   "Dependencies": [],

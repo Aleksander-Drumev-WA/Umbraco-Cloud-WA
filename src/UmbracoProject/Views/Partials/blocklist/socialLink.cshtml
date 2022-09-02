@@ -8,6 +8,6 @@
         var image = Model.Content.Value<IPublishedContent>("socialLinkImage", fallback: Fallback.ToAncestors);
         var url = Model.Content.Value<Link>("socialLinkLink", fallback: Fallback.ToAncestors);
 
-        <a href="@url.Url" class="social-icon-link w-inline-block"><img src="@image.Url()" width="25" alt=""></a>
+        <a href="@url.Url" class="social-icon-link w-inline-block"><img src="@image.Url()" asp-append-version="true" width="25" alt=""></a>
     
 }

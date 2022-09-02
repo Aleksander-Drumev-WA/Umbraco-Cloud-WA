@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Models.Blocks;
+@{
+
+    
+        var image = Model.Content.Value<IPublishedContent>("socialLinkImage", fallback: Fallback.ToAncestors);
+        var url = Model.Content.Value<Link>("socialLinkLink", fallback: Fallback.ToAncestors);
+
+        <a href="@url.Url" class="social-icon-link w-inline-block"><img src="@image.Url()" width="25" alt=""></a>
+    
+}

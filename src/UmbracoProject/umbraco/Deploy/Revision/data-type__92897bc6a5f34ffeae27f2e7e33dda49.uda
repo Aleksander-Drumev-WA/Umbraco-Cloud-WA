@@ -1,5 +1,5 @@
 {
-  "Name": "True/false",
+  "Name": "TrueFalse",
   "Alias": "",
   "EditorAlias": "Umbraco.TrueFalse",
   "DatabaseType": 2,

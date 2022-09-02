@@ -7,13 +7,12 @@
 
     var selection = Umbraco.ContentAtRoot().FirstOrDefault()
                     .Children()
-                    .Where(x => x.IsVisible())
-                    .Take(2);
+                    .Where(x => x.IsVisible());
 
     var currentCulture = Model.GetCultureFromDomains().Substring(0, 2);
 
-    var nestedContentLinks = Model.Value<IEnumerable<IPublishedElement>>("homeNestedLinks");
-    var blockListLinks = Model.Value<IEnumerable<BlockListItem>>("homeBlockListLinks");
+    var nestedContentLinks = Model.Value<IEnumerable<IPublishedElement>>("homeNestedLinks", fallback: Fallback.ToAncestors);
+    var blockListLinks = Model.Value<IEnumerable<BlockListItem>>("homeBlockListLinks", fallback: Fallback.ToAncestors);
 
 }
 
@@ -61,13 +60,21 @@
                 @{
                     foreach (var link in nestedContentLinks)
                     {
-                        var image = link.Value<IPublishedContent>("socialLinkImage");
-                        var url = link.Value<Link>("socialLinkLink");
+                        var image = link.Value<IPublishedContent>("socialLinkImage", fallback: Fallback.ToAncestors);
+                        var url = link.Value<Link>("socialLinkLink", fallback: Fallback.ToAncestors);
 
                         <a href="@url.Url" class="social-icon-link w-inline-block"><img src="@image.Url()" width="25" alt=""></a>
                     }
 
-                    @Html.GetBlockListHtml(Model, "homeBlockListLinks")
+                    <br />
+
+                    foreach (var block in blockListLinks)
+                    {
+                        var content = block.Content;
+
+
+                        @Html.Partial("blocklist/" + content.ContentType.Alias, block)
+                    }
                 }
             </div>
         </div>

@@ -22,13 +22,20 @@
     "AllowedChildContentTypes": []
   },
   "Parent": "umb://document-type-container/a2d8bdc0d63d4b9d979ce99d8253d556",
-  "CompositionContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/a87ac06bdd1e44f098bb12c60e160e39"
+  ],
   "PropertyGroups": [],
   "PropertyTypes": [],
   "Udi": "umb://document-type/b0c8241164b141128febee2dc620bf5b",
   "Dependencies": [
     {
       "Udi": "umb://document-type-container/a2d8bdc0d63d4b9d979ce99d8253d556",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a87ac06bdd1e44f098bb12c60e160e39",
       "Ordering": true,
       "Mode": 0
     },

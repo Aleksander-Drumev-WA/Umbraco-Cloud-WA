@@ -4,9 +4,11 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogPost>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
+    var currentCulture = @Model.GetCultureFromDomains();
 
-    var currentCulture = @Model.GetCultureFromDomains().Substring(0, 2);
+    //Model.Url(currentCulture, UrlMode.Absolute)
+    
 }
 
 <head>

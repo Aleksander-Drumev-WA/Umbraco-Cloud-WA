@@ -1,0 +1,11 @@
+{
+  "Name": "umb://dictionary-item/acab66bcdf2e4cc6bc1e2d6291d4e148",
+  "Alias": "",
+  "ItemKey": "Blog Post",
+  "ParentId": null,
+  "Translations": [],
+  "Udi": "umb://dictionary-item/acab66bcdf2e4cc6bc1e2d6291d4e148",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "10.0.3"
+}

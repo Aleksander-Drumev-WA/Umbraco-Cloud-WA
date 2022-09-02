@@ -5,6 +5,7 @@
 @{
     Layout = null;
 
+
     var selection = Umbraco.ContentAtRoot().FirstOrDefault()
                     .Children()
                     .Where(x => x.IsVisible());
@@ -36,9 +37,9 @@
         <div class="header">
             <div class="header-wrapper">
                 <a href="/home/@currentCulture/" class="site-name">Milton</a>
-                <div class="header-btns" onclick="changeLanguage(event)">
-                    <button id="en-btn">EN</button>
-                    <button id="bg-btn">BG</button>
+                <div class="header-btns">
+                    <button id="en-btn" onclick="location.href='@Model.Url("en-US", UrlMode.Absolute)';">EN</button>
+                    <button id="bg-btn" onclick="location.href='@Model.Url("bg", UrlMode.Absolute)';">BG</button>
                 </div>
             </div>
             <div class="grey-rule w-hidden-small w-hidden-tiny"></div>

@@ -4,16 +4,11 @@
 @{
     Layout = "Master.cshtml";
 
-    //var category = Model.Url().Split("/", StringSplitOptions.RemoveEmptyEntries).Last().ToLower();
-
-    var currentCulture = @Model.GetCultureFromDomains();
+    var currentCulture = Model.GetCultureFromDomains().Substring(0, 2);
 
     var selection = Umbraco.Content(Guid.Parse("c44023a8-22b5-4d53-aa25-30232c9aca97"))
                         .ChildrenOfType("blogPost")
                         .Where(x => x.IsVisible() && x.Value("categoryName").ToString().ToLower() == Model.Name.ToLower());
-                        
-
-
 }
 <head>
     <title>
@@ -53,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="button-wrapper"><a href="/all-posts/@currentCulture" class="button w-button">All Posts&nbsp;→</a></div>
+        <div class="button-wrapper"><a href="/all-posts/@currentCulture/" class="button w-button">All Posts&nbsp;→</a></div>
     </div>
 }
 

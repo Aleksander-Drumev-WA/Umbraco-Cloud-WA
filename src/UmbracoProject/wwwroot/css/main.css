@@ -606,11 +606,3 @@ figcaption {
     display: flex;
     justify-content: space-between;
 }
-
-#en-btn:disabled {
-    color: red;
-}
-
-#bg-btn:disabled {
-    color: red;
-}
